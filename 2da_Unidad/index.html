@@ -3,9 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Paint</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Paint</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
+    <!-- Contenedor del título -->
+    <div class="title-container">
+      <h1>Paint</h1>
+      <!--  <button id="toggleDarkMode">Modo Oscuro</button> -->
+    </div>
+
+    <!-- contenedor  -->
+    <div class="container">
+      <!-- herramientas -->
+      <div class="toolbar">
+        <h3>Herramientas</h3>
+        <label>
+          <input type="radio" name="tool" value="brush" checked /> Brocha
+        </label>
+        <label>
+          <input type="radio" name="tool" value="eraser" /> Borrador
+        </label>
+        <label>
+          <input type="radio" name="tool" value="rectangle" /> Rectángulo
+        </label>
+        <label>
+          <input type="radio" name="tool" value="circle" /> Círculo
+        </label>
+        <label>
+          <input type="radio" name="tool" value="triangle" /> Triángulo
+        </label>
+        <label> <input type="radio" name="tool" value="text" /> Texto </label>
+        <!-- opciones -->
+        <h3>Opciones</h3>
+        <label for="sizeRange">Tamaño:</label>
+        <input type="range" id="sizeRange" min="5" max="100" value="20" />
+        <span id="sizeDisplay">20</span>
+
+        <label for="colorPicker">Color:</label>
+        <input type="color" id="colorPicker" />
+
+        <label for="textInput">Texto:</label>
+        <input type="text" id="textInput" />
+        <button id="addText">Agregar Texto</button>
+
+        <button id="clearCanvas">Limpiar</button>
+        <button id="downloadCanvas">Descargar</button>
+      </div>
+
+      <!-- canvas -->
+      <div class="canvas-container">
+        <canvas id="paintCanvas" width="800" height="600"></canvas>
+      </div>
+    </div>
+  </body>
+  <script src="paint.js"></script>
 </html>
